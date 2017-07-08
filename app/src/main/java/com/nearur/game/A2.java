@@ -47,6 +47,6 @@ public class A2 extends AppCompatActivity {
 
         Scroller s=new Scroller(this);
         t1.setScroller(s);
-        t1.setText(n);
+        t1.setText(n+"");
     }
 }
