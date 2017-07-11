@@ -1,8 +1,10 @@
 package com.nearur.game;
 
 import android.content.Intent;
+import android.inputmethodservice.Keyboard;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -14,6 +16,19 @@ public class A1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_a1);
         t=(EditText)findViewById(R.id.editText);
+        t.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+                if(keyCode== event.KEYCODE_ENTER){
+                    cl(v);
+                    return true;
+                }
+
+                return false;
+            }
+
+        });
+
     }
     public void cl(View v) {
         Intent i = new Intent(this, A2.class);
