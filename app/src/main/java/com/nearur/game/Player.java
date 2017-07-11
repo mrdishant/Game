@@ -5,13 +5,11 @@ package com.nearur.game;
  */
 
 public class Player {
-    int i,j,k;
-
+    String i,j,k;
 
     @Override
     public String toString() {
-        return i+" , "+j+" , "+k;
+        return i+"  "+j+"  "+k;
     }
-
 
 }

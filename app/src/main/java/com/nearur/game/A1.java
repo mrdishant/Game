@@ -15,20 +15,7 @@ public class A1 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_a1);
-        t=(EditText)findViewById(R.id.editText);
-        t.setOnKeyListener(new View.OnKeyListener() {
-            @Override
-            public boolean onKey(View v, int keyCode, KeyEvent event) {
-                if(keyCode== event.KEYCODE_ENTER){
-                    cl(v);
-                    return true;
-                }
-
-                return false;
-            }
-
-        });
-
+        t = (EditText) findViewById(R.id.editText);
     }
     public void cl(View v) {
         Intent i = new Intent(this, A2.class);
