@@ -1,6 +1,7 @@
 package com.nearur.game;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -24,6 +25,7 @@ public class A2 extends AppCompatActivity {
     ArrayList<Integer> d;
     Player[] p;
     Button btn;
+    MediaPlayer mp;
     int n,count=0;
     void first(){
         t1=(TextView)findViewById(R.id.textViewDisplay);
@@ -38,6 +40,7 @@ public class A2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_a2);
+        mp=MediaPlayer.create(this,R.raw.b1);
         first();
         distribute(n);
     }
@@ -103,8 +106,8 @@ public class A2 extends AppCompatActivity {
                 String res="Player "+(i+1)+" Wins";
                 t2.setText(res);
                 btn.setVisibility(Button.INVISIBLE);
-                btn.destroyDrawingCache();
                 image.setBackgroundResource(R.drawable.tenor);
+                mp.start();
             }
         }
 
